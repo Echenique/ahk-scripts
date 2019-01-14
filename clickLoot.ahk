@@ -26,7 +26,7 @@ Wheelup::
     if(!charX || !charY)
     {
         MsgBox, 0, , set position
-        Sleep, 100
+        Sleep, 900
         KeyWait, LButton, D
         MouseGetPos, charX, charY
         return
@@ -35,7 +35,7 @@ Wheelup::
         MouseGetPos, initX, initY
         recoil := 80
         dl := 50
-        ;Send, {Shift down}
+        Send, {Shift down}
         MouseClick, Right, (charX-recoil), (charY-recoil)
         Sleep, dl
         MouseClick, Right, charX, charY-recoil
@@ -54,7 +54,7 @@ Wheelup::
         Sleep, dl
         MouseClick, Right, charX-recoil, charY
         Sleep, dl
-        ;Send, {Shift up}
+        Send, {Shift up}
         MouseMove, initX, initY
         return
     }
